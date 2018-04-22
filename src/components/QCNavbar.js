@@ -1,12 +1,8 @@
 import React from "react";
 import {
-	Collapse,
 	Navbar,
 	NavbarToggler,
 	NavbarBrand,
-	Nav,
-	NavItem,
-	NavLink,
 } from "reactstrap";
 import qc_logo from "../css/images/QC_Logo.png";
 import { LinkContainer } from "react-router-bootstrap";
@@ -30,7 +26,7 @@ export default class QCNavbar extends React.Component {
 		return (
 			<div className="black-bg">
 				<Navbar
-					className="bg-transparent"
+					className="black-bg"
 					light
 					expand="md"
 					fixed="top"
@@ -44,7 +40,7 @@ export default class QCNavbar extends React.Component {
 						</NavbarBrand>
 					</LinkContainer>
 					<NavbarToggler onClick={this.toggle} />
-					<Collapse isOpen={this.state.isOpen} navbar>
+					{/* <Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="ml-auto" navbar>
 							<NavItem>
 								<LinkContainer to="/oldies">
@@ -72,7 +68,7 @@ export default class QCNavbar extends React.Component {
 								</React.Fragment>
 							) : null}
 						</Nav>
-					</Collapse>
+					</Collapse> */}
 				</Navbar>
 			</div>
 		);
